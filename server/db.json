@@ -1,0 +1,117 @@
+{
+  "users": [
+    {
+      "id": "usr_4352bc688e77",
+      "name": "Admin",
+      "email": "admin@clg.edu",
+      "rollNo": null,
+      "passwordHash": "240be518fabd2724ddb6f04eeb1da5967448d7e831c08c8fa822809f74c720a9",
+      "role": "admin",
+      "branch": "All",
+      "year": 0,
+      "interests": [
+        "management"
+      ],
+      "clubsFollowed": [],
+      "createdAt": "2026-02-11T10:42:31.033Z"
+    },
+    {
+      "id": "usr_98812091f53d",
+      "name": "CSE Club",
+      "email": "organizer@clg.edu",
+      "rollNo": null,
+      "passwordHash": "9ed814e67a9da028eea6f1984a8bdecf9b50c7aec557df25331d66834656eb77",
+      "role": "organizer",
+      "branch": "CSE",
+      "year": 0,
+      "interests": [
+        "tech"
+      ],
+      "clubsFollowed": [
+        "Coding Club"
+      ],
+      "createdAt": "2026-02-11T10:42:31.034Z"
+    },
+    {
+      "id": "usr_4214d0d79858",
+      "name": "Aarav",
+      "email": "student@clg.edu",
+      "rollNo": "CSE23-001",
+      "passwordHash": "703b0a3d6ad75b649a28adde7d83c6251da457549263bc7ff45ec709b0a8448b",
+      "role": "student",
+      "branch": "CSE",
+      "year": 2,
+      "interests": [
+        "ai",
+        "coding",
+        "hackathon"
+      ],
+      "clubsFollowed": [
+        "Coding Club"
+      ],
+      "createdAt": "2026-02-11T10:42:31.034Z"
+    }
+  ],
+  "sessions": [
+    {
+      "token": "acdea0cd7b227ff8637e46324ff886d0250e860c1995d45f",
+      "userId": "usr_4214d0d79858",
+      "createdAt": "2026-02-11T10:42:31.069Z"
+    },
+    {
+      "token": "f51306d49d0bfee7c81f9ab085a4f533853703499c999d6b",
+      "userId": "usr_4214d0d79858",
+      "createdAt": "2026-02-11T10:42:56.057Z"
+    }
+  ],
+  "events": [
+    {
+      "id": "evt_0b0819bb0bce",
+      "title": "AI Workshop",
+      "description": "Hands-on workshop on AI tools for students.",
+      "venue": "Seminar Hall 2",
+      "startAt": "2026-02-12T10:42:31.034Z",
+      "endAt": "2026-02-12T11:42:31.034Z",
+      "registrationDeadline": "2026-02-12T08:55:51.034Z",
+      "capacity": 100,
+      "category": "workshop",
+      "tags": [
+        "ai",
+        "coding"
+      ],
+      "departmentVisibility": [
+        "All"
+      ],
+      "club": "Coding Club",
+      "status": "published",
+      "createdBy": "usr_98812091f53d",
+      "createdAt": "2026-02-11T10:42:31.034Z"
+    }
+  ],
+  "registrations": [
+    {
+      "id": "reg_35ded9aa29be",
+      "eventId": "evt_0b0819bb0bce",
+      "userId": "usr_4214d0d79858",
+      "status": "registered",
+      "qrToken": "qr_395b3c618365.evt_0b0819bb0bce.usr_4214d0d79858",
+      "createdAt": "2026-02-11T10:42:31.087Z"
+    }
+  ],
+  "announcements": [],
+  "feedback": [],
+  "notifications": [
+    {
+      "id": "notif_a9b0f245c297",
+      "userId": "usr_4214d0d79858",
+      "title": "Registration status",
+      "body": "You are registered for AI Workshop.",
+      "kind": "registration",
+      "meta": {
+        "eventId": "evt_0b0819bb0bce"
+      },
+      "isRead": false,
+      "createdAt": "2026-02-11T10:42:31.087Z"
+    }
+  ]
+}

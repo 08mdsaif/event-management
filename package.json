@@ -1,0 +1,12 @@
+{
+  "name": "college-event-management-system",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node server/index.js",
+    "check": "node --check server/index.js && node --check public/app.js && node --check scripts/smoke-test.js",
+    "smoke": "node scripts/smoke-test.js"
+  }
+}

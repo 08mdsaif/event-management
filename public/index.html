@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>College Event Management System</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>College Event Management System</h1>
+      <p>Smart discovery • Role dashboards • QR check-in • Feedback analytics</p>
+    </header>
+
+    <main>
+      <section class="card">
+        <h2>Quick Setup</h2>
+        <button id="seedBtn">Seed Demo Data</button>
+        <small>Creates admin, organizer, student demo accounts.</small>
+      </section>
+
+      <section class="card" id="authSection">
+        <h2>Login</h2>
+        <form id="loginForm">
+          <input type="text" id="identifier" placeholder="Email or Roll No" required />
+          <input type="password" id="password" placeholder="Password" required />
+          <button type="submit">Login</button>
+        </form>
+
+        <h3>Register</h3>
+        <form id="registerForm">
+          <input type="text" id="regName" placeholder="Full name" required />
+          <input type="email" id="regEmail" placeholder="Email" required />
+          <input type="text" id="regRoll" placeholder="Roll no" />
+          <select id="regRole">
+            <option value="student">Student</option>
+            <option value="organizer">Organizer</option>
+          </select>
+          <input type="text" id="regBranch" placeholder="Branch (CSE/ECE...)" />
+          <input type="number" id="regYear" placeholder="Year" min="1" max="4" />
+          <input type="text" id="regInterests" placeholder="Interests (comma-separated)" />
+          <input type="password" id="regPassword" placeholder="Password" required />
+          <button type="submit">Create Account</button>
+        </form>
+      </section>
+
+      <section class="card hidden" id="appSection">
+        <div class="row-between">
+          <h2 id="welcomeText"></h2>
+          <button id="logoutBtn">Logout</button>
+        </div>
+
+        <div class="tabs">
+          <button class="tabBtn active" data-tab="eventsTab">Events</button>
+          <button class="tabBtn" data-tab="recommendTab">For You</button>
+          <button class="tabBtn" data-tab="myRegTab">My Registrations</button>
+          <button class="tabBtn" data-tab="notifTab">Notifications</button>
+          <button class="tabBtn" data-tab="dashboardTab">Dashboard</button>
+          <button class="tabBtn hidden" id="organizerTabBtn" data-tab="organizerTab">Organizer Tools</button>
+        </div>
+
+        <div id="eventsTab" class="tabPanel">
+          <h3>Browse Events</h3>
+          <div class="grid2">
+            <input id="searchInput" placeholder="Search events" />
+            <button id="loadEventsBtn">Refresh Events</button>
+          </div>
+          <div id="eventsList" class="list"></div>
+        </div>
+
+        <div id="recommendTab" class="tabPanel hidden">
+          <h3>Smart Recommendations</h3>
+          <div id="recommendList" class="list"></div>
+        </div>
+
+        <div id="myRegTab" class="tabPanel hidden">
+          <h3>My Registrations (includes QR)</h3>
+          <div id="myRegistrations" class="list"></div>
+        </div>
+
+        <div id="notifTab" class="tabPanel hidden">
+          <h3>Notifications</h3>
+          <div id="notifications" class="list"></div>
+        </div>
+
+        <div id="dashboardTab" class="tabPanel hidden">
+          <h3>Dashboard</h3>
+          <pre id="dashboardData"></pre>
+        </div>
+
+        <div id="organizerTab" class="tabPanel hidden">
+          <h3>Create Event</h3>
+          <form id="createEventForm">
+            <input id="evtTitle" placeholder="Title" required />
+            <textarea id="evtDesc" placeholder="Description" required></textarea>
+            <input id="evtVenue" placeholder="Venue" required />
+            <label>Start</label><input id="evtStart" type="datetime-local" required />
+            <label>End</label><input id="evtEnd" type="datetime-local" required />
+            <input id="evtCapacity" type="number" placeholder="Capacity" required />
+            <input id="evtCategory" placeholder="Category" value="workshop" />
+            <input id="evtTags" placeholder="Tags comma-separated" />
+            <input id="evtDepartments" placeholder="Departments comma-separated (or All)" value="All" />
+            <input id="evtClub" placeholder="Club" value="General Club" />
+            <button type="submit">Create Event</button>
+          </form>
+
+          <h3>Organizer Analytics</h3>
+          <pre id="organizerData"></pre>
+        </div>
+      </section>
+
+      <section class="card"><pre id="log"></pre></section>
+    </main>
+
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>
